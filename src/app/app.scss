@@ -1,0 +1,16 @@
+:host {
+  display: block;
+  overflow-x: hidden; // Evita scroll horizontal por animaciones
+}
+
+main {
+  min-height: 100vh;
+}
+
+// Suavizado de fuentes para toda la web
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

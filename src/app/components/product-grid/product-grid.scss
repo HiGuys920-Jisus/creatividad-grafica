@@ -1,0 +1,197 @@
+.products-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+
+  .title {
+    font-size: 2.2rem;
+    color: #1a1a2e;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    display: flex;
+    justify-content: center;
+    span {
+      width: 60px;
+      height: 4px;
+      background: #0072ff;
+      border-radius: 2px;
+    }
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+
+  @media (max-width: 1100px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+
+  &:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  }
+
+  .card-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 2;
+
+    .icon-wrapper {
+      background: rgba(255,255,255,0.2);
+      padding: 10px;
+      border-radius: 10px;
+      img { width: 45px; height: 45px; object-fit: contain; }
+    }
+
+    h3 { font-size: 1.1rem; margin-bottom: 5px; font-weight: bold; }
+    p { font-size: 0.8rem; opacity: 0.9; margin: 0; line-height: 1.2; }
+  }
+
+  // Clases de colores
+  &.magenta { background: linear-gradient(135deg, #e91e63, #c2185b); }
+  &.cyan { background: linear-gradient(135deg, #00bcd4, #0097a7); }
+  &.yellow { background: linear-gradient(135deg, #ffb300, #f57c00); }
+  &.orange { background: linear-gradient(135deg, #ff9800, #f57c00); }
+  &.blue { background: linear-gradient(135deg, #2196f3, #1976d2); }
+  &.green { background: linear-gradient(135deg, #4caf50, #388e3c); }
+  &.purple { background: linear-gradient(135deg, #9c27b0, #7b1fa2); }
+  &.red { background: linear-gradient(135deg, #f44336, #d32f2f); }
+}
+
+.footer-action {
+  text-align: center;
+  margin-top: 50px;
+
+  .btn-outline {
+    padding: 12px 35px;
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background: #f0f0f0;
+      border-color: #bbb;
+      color: #333;
+    }
+  }
+}
+
+/* --- ESTILOS DEL MODAL DE GALERÍA --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  width: 95%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .close-btn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    &:hover { transform: scale(1.2); }
+  }
+}
+
+.gallery-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  .nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    
+    &:hover { background: #0072ff; border-color: #0072ff; }
+  }
+
+  .image-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 75vh;
+      border-radius: 12px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+
+    .counter {
+      margin-top: 20px;
+      color: white;
+      font-size: 1rem;
+      background: rgba(255,255,255,0.1);
+      padding: 5px 15px;
+      border-radius: 20px;
+    }
+  }
+}

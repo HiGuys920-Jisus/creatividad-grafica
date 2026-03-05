@@ -1,0 +1,61 @@
+<section class="about-section" id="nosotros">
+  <div class="container">
+    <div class="about-grid">
+      
+      <div class="about-image-container">
+        <div class="image-wrapper">
+          <img src="assets/equipo-diseno.jpg" alt="Nuestro Equipo Creativo" class="main-img">
+          <div class="accent-box"></div>
+        </div>
+        <div class="color-palette-card">
+          <img src="assets/pantone-colors.jpg" alt="Paleta de colores">
+        </div>
+      </div>
+
+      <div class="about-text-content">
+        <h2 class="section-title">Acerca de Nosotros</h2>
+        <p class="description">
+          Creatividad Gráfica es una empresa dedicada a brindar soluciones publicitarias con un alto nivel de compromiso y calidad. 
+          Contamos con tecnología de vanguardia para que cada impresión sea un reflejo exacto de su visión.
+        </p>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="icon-creative"></i></div>
+            <div class="feature-info">
+              <h3>Experiencia Creativa</h3>
+              <p>Más de 10 años transformando ideas en realidades impresas de alto impacto.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon"><i class="icon-tech"></i></div>
+            <div class="feature-info">
+              <h3>Tecnología Moderna</h3>
+              <p>Maquinaria de última generación para acabados precisos y colores vibrantes.</p>
+            </div>
+          </div>
+
+          <div class="feature-item">
+            <div class="feature-icon"><i class="icon-support"></i></div>
+            <div class="feature-info">
+              <h3>Atención Personalizada</h3>
+              <p>Asesoría directa en cada etapa de su proyecto, desde el diseño hasta la entrega.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-more" (click)="toggleFolleto()">Mostrar Folleto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="folleto-overlay" *ngIf="mostrarFolleto" (click)="toggleFolleto()">
+    <div class="folleto-modal" (click)="$event.stopPropagation()">
+      <button class="btn-cerrar" (click)="toggleFolleto()">×</button>
+      <div class="folleto-container">
+        <img src="assets/creatividad-grafica-folleto.png" alt="Folleto Creatividad Gráfica">
+      </div>
+    </div>
+  </div>
+</section>

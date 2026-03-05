@@ -1,0 +1,58 @@
+<section class="products-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="title">Nuestros Productos</h2>
+      <div class="divider"><span></span></div>
+    </div>
+
+    <div class="grid-container">
+      <div *ngFor="let prod of productos" 
+           class="product-card" 
+           [ngClass]="prod.colorClass">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <img [src]="prod.icon" [alt]="prod.nombre">
+          </div>
+          <div class="text-wrapper">
+            <h3>{{ prod.nombre }}</h3>
+            <p>{{ prod.descripcion }}</p>
+          </div>
+        </div>
+        <div class="card-hover-bg"></div>
+      </div>
+    </div>
+
+    <div class="footer-action">
+      <button class="btn-outline" (click)="openModal()">
+        Mostrar Previas de Productos
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="modal-overlay" *ngIf="showModal" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+
+    <div class="gallery-container">
+      <button class="nav-btn prev" (click)="prevImage()">
+        &#10094;
+      </button>
+      
+      <div class="image-wrapper">
+        <img [src]="previewImages[currentIndex]" 
+             alt="Previa de producto {{ currentIndex + 1 }}">
+        
+        <div class="counter">
+          {{ currentIndex + 1 }} / {{ previewImages.length }}
+        </div>
+      </div>
+
+      <button class="nav-btn next" (click)="nextImage()">
+        &#10095;
+      </button>
+    </div>
+
+  </div>
+</div>
