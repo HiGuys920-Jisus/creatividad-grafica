@@ -1,59 +1,45 @@
-# CreatividadGrafica
+# Creatividad Gráfica 🎨
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Sitio web oficial de **Creatividad Gráfica**, un emprendimiento especializado en diseño publicitario, gigantografías, folletos y soluciones visuales personalizadas para negocios y eventos.
 
-## Development server
+## ✨ Características del Proyecto
 
-To start a local development server, run:
+* **Diseño Moderno:** Interfaz responsiva desarrollada con **Angular 21** y **Tailwind CSS**.
+* **Mapa Interactivo:** Integración de Google Maps para ubicar el local físico en Av. Los Héroes Nº 565, San Juan de Miraflores.
+* **Catálogo Digital:** Botón interactivo en la sección "Nosotros" para visualizar el folleto de servicios.
+* **Formulario de Contacto:** Sistema funcional para recibir consultas directas de clientes a través de EmailJS.
+* **Optimización para Web:** Configuración personalizada para despliegue en **Netlify** con manejo de rutas SPA mediante `netlify.toml`.
 
-```bash
-ng serve
-```
+## 🛠️ Tecnologías Utilizadas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* **Frontend:** Angular (v21.1.4)
+* **Estilos:** Tailwind CSS y SCSS
+* **Despliegue:** Netlify
+* **Gestión de Datos:** Python (para procesamiento de archivos internos)
 
-## Code scaffolding
+## 🚀 Instalación y Desarrollo Local
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Si deseas ejecutar este proyecto en tu entorno local:
 
-```bash
-ng generate component component-name
-```
+1.  **Clona el repositorio:**
+    ```bash
+    git clone [https://github.com/HiGuys920-Jisus/creatividad-grafica.git](https://github.com/HiGuys920-Jisus/creatividad-grafica.git)
+    ```
+2.  **Instala las dependencias (Se recomienda Node v20 LTS):**
+    ```bash
+    npm install
+    ```
+3.  **Inicia el servidor de desarrollo:**
+    ```bash
+    ng serve
+    ```
+4.  **Abre tu navegador en:** `http://localhost:4200`
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📁 Estructura de Archivos Clave
 
-```bash
-ng generate --help
-```
+* `src/app/components/footer`: Contiene el mapa y el formulario de contacto.
+* `src/app/components/about-us`: Implementación de la lógica para mostrar el folleto publicitario.
+* `public/`: Carpeta que almacena los recursos gráficos y el folleto del negocio.
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+Desarrollado por **Aguirre Ramos Jesus Enmanuel (N00325354)**.
